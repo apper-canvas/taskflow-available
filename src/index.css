@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+  
+  * {
+    @apply border-surface-200 dark:border-surface-700;
+  }
+}
+
+@layer components {
+  .task-card {
+    @apply bg-white dark:bg-surface-800 rounded-xl border border-surface-200 dark:border-surface-700 shadow-task hover:shadow-card transition-all duration-200;
+  }
+  
+  .task-card-completed {
+    @apply bg-surface-50 dark:bg-surface-900 opacity-75;
+  }
+  
+  .priority-indicator {
+    @apply w-1 h-full rounded-full;
+  }
+  
+  .priority-low {
+    @apply bg-green-400;
+  }
+  
+  .priority-medium {
+    @apply bg-yellow-400;
+  }
+  
+  .priority-high {
+    @apply bg-orange-500;
+  }
+  
+  .priority-urgent {
+    @apply bg-red-500;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-soft hover:shadow-card;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface-100 dark:bg-surface-700 hover:bg-surface-200 dark:hover:bg-surface-600 text-surface-700 dark:text-surface-300 font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-surface-300 dark:border-surface-600 rounded-xl bg-white dark:bg-surface-800 text-surface-900 dark:text-surface-100 placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+  
+  .category-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-2 py-1 rounded-md text-xs font-medium;
+  }
+  
+  .glassmorphism {
+    @apply bg-white/20 dark:bg-surface-800/20 backdrop-blur-lg border border-white/30 dark:border-surface-700/30;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+  
+  .animate-in {
+    @apply animate-slide-in;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface-100 dark:bg-surface-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-300 dark:bg-surface-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-surface-400 dark:bg-surface-500;
+}
+
+/* React Toastify custom styles */
+.Toastify__toast {
+  @apply rounded-xl shadow-soft;
+}
+
+.Toastify__progress-bar {
+  @apply bg-gradient-to-r from-primary to-secondary;
+}
