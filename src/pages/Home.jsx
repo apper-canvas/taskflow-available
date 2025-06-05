@@ -48,7 +48,7 @@ const Home = () => {
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full border-2 border-white dark:border-surface-800 animate-pulse"></div>
             </div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-gradient">TaskFlow</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gradient">TaskFlow Pro</h1>
               <p className="text-xs text-surface-600 dark:text-surface-400 font-medium">Streamline Your Productivity</p>
             </div>
           </motion.div>
